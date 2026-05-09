@@ -104,7 +104,7 @@ LIBINPUT_CONFIG_TAP_MAP_LMR -- 1/2/3 finger tap maps to left/middle/right
 static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TAP_MAP_LRM;
 
 /* If you want to use the windows key for MODKEY, use WLR_MODIFIER_LOGO */
-#define MODKEY WLR_MODIFIER_ALT
+#define MODKEY WLR_MODIFIER_LOGO
 
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                    KEY,            view,            {.ui = 1 << TAG} }, \
@@ -142,17 +142,17 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_0,           tag,              {.ui = ~0} },
 	{ MODKEY,                    XKB_KEY_comma,       focusmon,         {.i = WLR_DIRECTION_LEFT} },
 	{ MODKEY,                    XKB_KEY_period,      focusmon,         {.i = WLR_DIRECTION_RIGHT} },
-	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_comma,       tagmon,           {.i = WLR_DIRECTION_LEFT} },
-	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_period,      tagmon,           {.i = WLR_DIRECTION_RIGHT} },
-	TAGKEYS(                     XKB_KEY_1,           0),
-	TAGKEYS(                     XKB_KEY_2,           1),
-	TAGKEYS(                     XKB_KEY_3,           2),
-	TAGKEYS(                     XKB_KEY_4,           3),
-	TAGKEYS(                     XKB_KEY_5,           4),
-	TAGKEYS(                     XKB_KEY_6,           5),
-	TAGKEYS(                     XKB_KEY_7,           6),
-	TAGKEYS(                     XKB_KEY_8,           7),
-	TAGKEYS(                     XKB_KEY_9,           8),
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_less,        tagmon,           {.i = WLR_DIRECTION_LEFT} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_greater,     tagmon,           {.i = WLR_DIRECTION_RIGHT} },
+	TAGKEYS(          XKB_KEY_1, XKB_KEY_exclam,                       0),
+	TAGKEYS(          XKB_KEY_2, XKB_KEY_at,                            1),
+	TAGKEYS(          XKB_KEY_3, XKB_KEY_numbersign,                    2),
+	TAGKEYS(          XKB_KEY_4, XKB_KEY_dollar,                        3),
+	TAGKEYS(          XKB_KEY_5, XKB_KEY_percent,                       4),
+	TAGKEYS(          XKB_KEY_6, XKB_KEY_asciicircum,                   5),
+	TAGKEYS(          XKB_KEY_7, XKB_KEY_ampersand,                     6),
+	TAGKEYS(          XKB_KEY_8, XKB_KEY_asterisk,                      7),
+	TAGKEYS(          XKB_KEY_9, XKB_KEY_parenleft,                     8),
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_q,           quit,             {0} },
 
 	/* Ctrl-Alt-Backspace and Ctrl-Alt-Fx used to be handled by X server */
