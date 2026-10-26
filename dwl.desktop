@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=dwl
 Comment=dwm for Wayland
-Exec=bash -c 'source ~/workspaceconfig/sourceme/sourceme.sh; dwl -d -s ~/workspaceconfig/DEPS/scripts/shell/dwl-startup.sh'
+Exec=bash -c 'source ~/workspaceconfig/sourceme/sourceme.sh; dwl -d -s ~/workspaceconfig/deps/scripts/shell/dwl-startup.sh 2>>"$HOME/dwl.log"'
 Type=Application
