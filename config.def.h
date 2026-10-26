@@ -168,13 +168,13 @@ static const Key keys[] = {
 	TAGKEYS(          XKB_KEY_9, XKB_KEY_parenleft,                     8),
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_q,           quit,             {0} }, // a.k.a logout
   // See https://github.com/etokarew/i3dracula/blob/main/XF86.md for XKB_KEY_XF86 names
-	{ 0,				                 XKB_KEY_XF86MonBrightnessUp,   spawn,     SHCMD("~/workspaceconfig/DEPS/scripts/shell/backlight --inc 5") },
-	{ 0,				                 XKB_KEY_XF86MonBrightnessDown, spawn,     SHCMD("~/workspaceconfig/DEPS/scripts/shell/backlight --dec 5") },
-	{ 0,				                 XKB_KEY_XF86AudioRaiseVolume,   spawn,     SHCMD("~/workspaceconfig/DEPS/scripts/shell/volume --inc 1 ") },
-	{ 0,				                 XKB_KEY_XF86AudioLowerVolume,   spawn,     SHCMD("~/workspaceconfig/DEPS/scripts/shell/volume --dec 1") },
-	{ 0,				                 XKB_KEY_XF86AudioMute,          spawn,     SHCMD("~/workspaceconfig/DEPS/scripts/shell/volume --mute") },
-	{ 0,				                 XKB_KEY_XF86AudioMicMute,          spawn,     SHCMD("~/workspaceconfig/DEPS/scripts/shell/mic --mute") },
-	{ 0,				                 XKB_KEY_XF86Calculator,          spawn,     SHCMD("~/workspaceconfig/DEPS/scripts/shell/lock-and-suspend") },
+	{ 0,				                 XKB_KEY_XF86MonBrightnessUp,   spawn,     SHCMD("~/workspaceconfig/deps/scripts/shell/backlight --inc 5") },
+	{ 0,				                 XKB_KEY_XF86MonBrightnessDown, spawn,     SHCMD("~/workspaceconfig/deps/scripts/shell/backlight --dec 5") },
+	{ 0,				                 XKB_KEY_XF86AudioRaiseVolume,   spawn,     SHCMD("~/workspaceconfig/deps/scripts/shell/volume --inc 1 ") },
+	{ 0,				                 XKB_KEY_XF86AudioLowerVolume,   spawn,     SHCMD("~/workspaceconfig/deps/scripts/shell/volume --dec 1") },
+	{ 0,				                 XKB_KEY_XF86AudioMute,          spawn,     SHCMD("~/workspaceconfig/deps/scripts/shell/volume --mute") },
+	{ 0,				                 XKB_KEY_XF86AudioMicMute,          spawn,     SHCMD("~/workspaceconfig/deps/scripts/shell/mic --mute") },
+	{ 0,				                 XKB_KEY_XF86Calculator,          spawn,     SHCMD("~/workspaceconfig/deps/scripts/shell/lock-and-suspend") },
 
 	/* Ctrl-Alt-Backspace and Ctrl-Alt-Fx used to be handled by X server */
 	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_Terminate_Server, quit, {0} },
